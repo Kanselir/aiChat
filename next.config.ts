@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+   experimental: {
+       serverComponentsExternalPackages: ['react-markdown'],
+     },
 };
 
 export default nextConfig;
