@@ -23,9 +23,9 @@ const nextConfig: NextConfig = {
     serverComponentsExternalPackages: ['react-markdown'],
   },
   output: 'export',
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/aiChat',
+  basePath: process.env.NODE_ENV === 'production' ? '/aiChat' : '',
   trailingSlash: true,
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/aiChat',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/aiChat' : '',
 };
 
 export default nextConfig;
