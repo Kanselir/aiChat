@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "GOOGLE_GENAI_API_KEY": "AIzaSyBRX_oqTiJ4p2-RD-isABwmYjReYHyitTM"
+  },
+  "framework": "nextjs"
+} 

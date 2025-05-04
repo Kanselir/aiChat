@@ -8,23 +8,11 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-    unoptimized: true,
+    domains: ['picsum.photos'],
   },
   experimental: {
-    serverComponentsExternalPackages: ['react-markdown'],
+    serverExternalPackages: ['react-markdown'],
   },
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/aiChat' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/aiChat' : '',
-  trailingSlash: true,
 };
 
 export default nextConfig;
