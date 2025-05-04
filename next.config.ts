@@ -17,12 +17,15 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true,
   },
-   experimental: {
-       serverComponentsExternalPackages: ['react-markdown'],
-     },
+  experimental: {
+    serverComponentsExternalPackages: ['react-markdown'],
+  },
   output: 'export',
-  basePath: '/aiChat',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/aiChat',
+  trailingSlash: true,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/aiChat',
 };
 
 export default nextConfig;
