@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
    experimental: {
        serverComponentsExternalPackages: ['react-markdown'],
      },
+  output: 'export',
+  basePath: '/aiChat',
 };
 
 export default nextConfig;
